@@ -7509,7 +7509,7 @@ void CmdBuffer::BindTargets(
 
         PalCmdBuffer(deviceIdx)->CmdBindTargets(params);
 
-        if (pRenderingFragmentShadingRateAttachmentInfoKHR != nullptr)
+        if (pRenderingFragmentShadingRateAttachmentInfoKHR != nullptr && pRenderingFragmentShadingRateAttachmentInfoKHR->imageView != nullptr)
         {
             // Get the image view from the attachment info
             const ImageView* const pImageView =
